@@ -1,0 +1,17 @@
+.cards{
+  padding: 20px;
+  background-color: burlywood;
+}
+
+.card{
+  width: 150px;
+  height: 200px;
+  background-color: bisque;
+  padding: 20px 10px;
+  border: 2px dashed blueviolet;
+  margin-bottom: 20px;
+}
+
+.cardBtn{
+  margin-left: 90px;
+}

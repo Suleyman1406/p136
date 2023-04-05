@@ -1,0 +1,52 @@
+/* .viewYellow {
+  background-color: yellow;
+}
+
+#headingDiv {
+  color: red;
+  background-color: purple;
+}
+div {
+  background-color: blue;
+}
+
+div{
+  background-color: black;
+}
+
+#headingDiv2{
+  background-color: aqua;
+}
+ */
+/* div{
+  background-color: red;
+}
+div{
+  background-color: coral;
+} */
+
+/* #paragraph1 {
+  background-color: gray;
+  color: rgb(28, 204, 98);
+} */
+
+
+.cards{
+  background-color: blanchedalmond;
+}
+
+.card{
+  width: 100px;
+  height: 150px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* margin: 0 auto; */
+  padding: 30px 20px 10px 15px;
+  margin-top: auto;
+  border-width: 2px;
+  border-color: aqua;
+  border-style: dashed;
+  border-radius: 10px;
+  background-color: rgb(211, 209, 152);
+}
+
