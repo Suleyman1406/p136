@@ -1,0 +1,130 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* div{
+  background-color: red;
+}
+
+.test2{
+  background-color: aqua;
+}
+
+.test3{
+  background-color: blue;
+}
+
+.test4{
+  background-color: bisque;
+}
+
+.test3.test4{
+  background-color: black;
+} */
+
+/* div div .test2{
+  background-color: black;
+} */
+
+/* div * {
+  color: red;
+} */
+
+/* p.test,span.test{
+  color: red;
+} */
+
+/* 
+p,h1{
+  background-color: aqua;
+} */
+
+/* .test1>.test2{
+  background-color: red;
+} */
+
+/* .outside-div{
+  width: 400px; 
+}
+
+div div{
+  width: 200px;
+  background-color: red;
+}
+span{
+  height: 200px;
+  display: inline-block;
+  background-color: red;
+} 
+*/
+
+/* .card{
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+  display: inline-block;
+  background-color: red;
+} */
+
+
+/* .card{
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+} */
+
+/* #test {
+  opacity: 0.4;
+} 
+
+.testDiv{
+  height: 200px;
+  background-color: red;
+} */
+
+/* button{
+  opacity: 0.3;
+  cursor: help;
+} */
+
+/* div{
+  background-color: rgba(155,0,0,1);
+}
+p{
+  text-align: left;
+} */
+
+/* span{
+  text-align: center;
+} */
+
+/* a{
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+} */
+
+p{
+  text-indent: 200px;
+  text-transform: capitalize;
+  /* letter-spacing: 3px; */
+  /* line-height: 0px; */
+  /* word-spacing: 50px; */
+  /* width: 100%; */
+  /* max-width: 200px; */
+  /* max-height: 200px; */
+}
+
+span{
+  width: 500px;
+  display: inline-block;
+  background-color: pink;
+}
+
+div{
+  background-color: red;
+  height: 300px;
+  width: 100%;
+  max-width: 200px;
+}
