@@ -20,6 +20,7 @@ body {
   width: 1280px;
   padding: 0 32px;
   margin: auto;
+  transition: 0.3s;
 }
 
 .topbar_container {
@@ -27,6 +28,11 @@ body {
   padding-bottom: 3px;
   display: flex;
   justify-content: space-between;
+}
+.topbar_container > button {
+  background: none;
+  border: none;
+  display: none;
 }
 
 .topbar_left_section {
@@ -203,4 +209,94 @@ h1 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 672px;
+  }
+  .topbar_left_section > div {
+    display: none;
+  }
+  .topbar_container .topbar_right_section {
+    display: none;
+  }
+  .topbar_container > button {
+    display: initial;
+  }
+  .topbar_container {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .welcome_container {
+    flex-direction: column;
+    margin-top: 48px;
+    align-items: initial;
+  }
+  .welcome_container .welcome_right_section {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .welcome_container .welcome_left_section {
+    order: 1;
+    margin-top: 40px;
+  }
+  .container {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 343px;
+  }
+  .topbar_container {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .welcome_right_section {
+    width: 343px;
+    height: 343px;
+    padding: 19.6px;
+  }
+  .welcome_right_section .cards {
+    gap: 6.12px;
+  }
+  .welcome_right_section .cards .card {
+    width: 148.84px;
+    height: 148.84px;
+  }
+  .welcome_right_section .cards .card img {
+    width: 31.85px;
+    height: 31.85px;
+  }
+  .welcome_right_section .cards .card strong {
+    font-size: 16px;
+  }
+  .welcome_right_section .cards .card p {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.06px;
+  }
+  .welcome_left_section {
+    width: 100%;
+  }
+  .welcome_left_section h1 {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -2%;
+  }
+  .welcome_left_section > div:last-child {
+    flex-direction: column;
+    row-gap: 8px;
+  }
+  .welcome_left_section > div:last-child input {
+    width: 100%;
+    border-radius: 6px;
+  }
+  .welcome_left_section > div:last-child button {
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
 }
