@@ -42,6 +42,7 @@ h4 {
 
 #navbar_heading {
   padding: 24px 0;
+  background-color: #f6f5f4;
   box-shadow: inset 0px -1px 0px #e0e0e0;
 }
 
@@ -136,5 +137,105 @@ h4 {
   }
   .navbar_left_section img:nth-child(2) {
     height: 16px;
+  }
+}
+#e-course_platform {
+  background-color: #f6f5f4;
+  overflow-x: hidden;
+}
+.e-course_platform_container {
+  padding: 94.61px 0;
+  position: relative;
+}
+.e-course_platform_content {
+  width: 531px;
+}
+
+.e-course_platform_content p:first-child {
+  color: #2b788b;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 14%;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.e-course_platform_content p:nth-child(3) {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25.2px;
+  letter-spacing: -4%;
+  color: #757575;
+}
+
+.e-course_platform_content button {
+  color: #2b788b;
+  padding: 14px 22px;
+  background-color: #c3dce3;
+  border: 3px solid transparent;
+  transition: 0.3s;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -4%;
+  margin-top: 32px;
+  border-radius: 100px;
+}
+
+.e-course_platform_content button:hover {
+  border-color: #2b788b;
+  background-color: transparent;
+}
+.e-course_platform_content > div:last-child {
+  display: flex;
+  margin-top: 50px;
+  column-gap: 50px;
+}
+.e-course_platform_content > div:last-child > div:first-child {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.e-course_platform_content > div:last-child > div:first-child p {
+  font-family: "Dela Gothic";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -2%;
+}
+.e-course_platform_content > div:last-child > div:first-child p span {
+  color: #2b788b;
+}
+
+#e-course_platform_img {
+  position: absolute;
+  top: 109px;
+  right: -253.1px;
+}
+
+@media screen and (max-width: 1180px) {
+  #e-course_platform_img {
+    position: initial;
+    margin-top: 20px;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: left;
+  }
+  .e-course_platform_container {
+    padding: 40px 0;
+    text-align: center;
+  }
+  .e-course_platform_content p:first-child {
+    font-size: 12px;
+  }
+  .e-course_platform_content h1 {
+    font-size: 32px;
+  }
+  .e-course_platform_content {
+    width: 100%;
   }
 }
