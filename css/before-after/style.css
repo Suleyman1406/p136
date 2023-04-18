@@ -26,8 +26,8 @@ a::after {
   position: absolute;
   transition: 0.4s;
   content: "";
-  border-bottom: 1px hidden goldenrod;
-  border-right: 1px hidden goldenrod;
+  border-bottom: 1px solid goldenrod;
+  border-right: 1px solid goldenrod;
   height: 0;
   bottom: 0;
   width: 0;
@@ -35,8 +35,6 @@ a::after {
 }
 
 a:hover::after {
-  border-bottom-style: solid;
-  border-right-style: solid;
   width: 100%;
   height: 100%;
 }
