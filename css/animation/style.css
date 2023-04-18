@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 200px;
+  justify-content: center;
+  animation: dubaiNight 2s infinite;
+}
+
+div {
+  background-color: pink;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation-name: moveToRight;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+
+  /* animation-name: comeToMeTonight;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; */
+}
+.test1 {
+  animation-timing-function: ease;
+}
+.test2 {
+  top: 250px;
+  animation-timing-function: ease-in;
+}
+.test3 {
+  top: 550px;
+  animation-timing-function: ease-out;
+}
+.test4 {
+  top: 750px;
+  animation-timing-function: ease-in-out;
+}
+.test5 {
+  top: 950px;
+  animation-timing-function: linear;
+}
+.test6 {
+  top: 1200px;
+  animation-timing-function: cubic-bezier(0.27, 2.01, 1, -0.69);
+}
+
+/*
+.heart-1 {
+  width: 24px; 
+  height: 24px; 
+  background: #ff5252; 
+   clip-path: path(
+    "M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"
+  );
+  transform: scale(5);
+}
+ */
+
+@keyframes moveToRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 2000px;
+  }
+
+  /* 25% {
+    top: 0;
+    left: 500px;
+  }
+  50% {
+    left: 500px;
+    top: 500px;
+  }
+  75% {
+    top: 500px;
+    left: 0px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  } */
+}
+
+/* @keyframes comeToMeTonight {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1.6);
+  }
+  90% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
+
+/* @keyframes dubaiNight {
+  25% {
+    background-color: black;
+  }
+  50% {
+    background-color: yellow;
+  }
+  75% {
+    background-color: red;
+  }
+  100% {
+    background-color: cadetblue;
+  }
+} */
