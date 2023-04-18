@@ -13,7 +13,7 @@ body {
 
 #topbar {
   padding: 20px 0;
-  border-bottom: 1px solid #eaebf0;
+  border-bottom: 1px solid #2e3545;
 }
 
 .container {
@@ -300,3 +300,28 @@ h1 {
     margin-bottom: 20px;
   }
 }
+
+/* #blog_welcome_nav_container { */
+/* background-image: url("./assets/images/bg-1.png"),
+    url("./assets/images/bg-2.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover; */
+/* background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  ); */
+/* } */
+/* 
+#blog-section {
+  height: 368px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#blog-section h1 {
+  width: 520px;
+  text-align: center;
+  font-size: 52px;
+} */
