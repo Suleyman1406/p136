@@ -1,0 +1,198 @@
+// $color-blue: rgb(0, 45, 246);
+
+// body{
+//   background-color: $color-blue;
+//   font-size: 19px;
+//   font-weight: 800;
+//   line-height: 20px;
+// }
+
+// $color-blue: rgba(1,1,1);
+
+// body{
+//   background-color: $color-blue;
+// }
+
+// $font-stack: Helvetica, sans-serif;
+// $primary-color: #333;
+
+// body {
+//   font-size: 100px;
+// }
+
+// div {
+//   background-color: red;
+// }
+// div ul {
+//   list-style-type: none;
+// }
+
+// div ul li {
+//   width: 200px;
+// }
+
+// div ul li a{
+//   color: red;
+// }
+
+// div {
+//   background-color:  red;
+//   ul{
+//     list-style-type: none;
+//     li{
+//       width: 200px;
+//       a{
+//         color: white;
+//         &:hover {
+//             color: blue;
+//         }
+
+//       }
+//     }
+//   }
+//   .trial{
+//     background-color: aquamarine;
+//     &__test{
+//       background-color: bisque;
+//     }
+//   }
+// }
+
+// @mixin avatar($elgun) {
+//   background-color: aqua;
+//   @if $elgun {
+//     border-radius: 40px;
+//   } @else {
+//     border-radius: 10px;
+//   }
+// }
+
+// .test {
+//   @include avatar(true);
+// }
+
+// .test2 {
+//   @include avatar(false);
+// }
+
+// .circle-av {
+//   @include avatar(100px, $circle: true);
+// }
+
+// $size: 230px;
+
+// .test {
+//   @if $size == 100px {
+//     background-color: red;
+//   } @else if $size == 200px {
+//     background-color: blue;
+//   } @else {
+//     background-color: aqua;
+//   }
+// }
+
+// $sizes: 40px, 20px, 80px;
+
+// @each $size in $sizes {
+//   .icon-#{$size} {
+//     font-size: $size;
+//     height: $size;
+//     width: $size;
+//   }
+// }
+
+// $base-color: #036;
+
+// @for $i from 1 through 5 {
+//   ul:nth-child(3n + #{$i}) {
+//     font-size: $i;
+//   }
+// }
+
+// @use "variables";
+
+// div {
+//   background-color: variables.$blue;
+// }
+
+// @mixin reset-list($hadjar, $elgun, $AIlkin, $isNavbarButton) {
+//   margin: 0;
+//   padding: 10px;
+//   // font-size: $font-size;
+//   list-style: none;
+//   color: $hadjar;
+//   display: inline-block;
+//   border: 1px solid $hadjar;
+//   #{$elgun}: $AIlkin;
+
+//   @if $isNavbarButton {
+//     background-color: black;
+//   }
+// }
+
+// ul:first-child {
+//   @include reset-list(blue, font-size, 40px, test);
+// }
+
+// ul:last-child {
+//   @include reset-list(red, margin, 30px, false);
+//   position: absolute;
+//   left: 200px;
+//   top: 10px;
+// }
+
+// .button {
+//   width: 200px;
+//   height: 200px;
+//   font-size: 18px;
+//   line-height: 20px;
+// }
+
+// .button-primary {
+//   @extend .button;
+//   background-color: aqua;
+// }
+// .button-error {
+//   @extend .button;
+//   background-color: red;
+// }
+
+// @mixin reflexive-position($property, $value) {
+//   @if $property != left and $property != right {
+//     @error "Property #{$property} must be either left or right.";
+//   }
+
+//   $left-value: if($property == right, initial, $value);
+//   $right-value: if($property == right, $value, initial);
+
+//   left: $left-value;
+//   right: $right-value;
+//   [dir="rtl"] & {
+//     left: $right-value;
+//     right: $left-value;
+//   }
+// }
+
+// .sidebar {
+//   @include reflexive-position(top, 12px);
+//   //       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//   // Error: Property top must be either left or right.
+// }
+
+// $known-prefixes: webkit, moz, ms, o;
+
+// @mixin prefix($property, $value, $prefixes) {
+//   @each $prefix in $prefixes {
+//     @if not index($known-prefixes, $prefix) {
+//       @warn "Test Unknown prefix #{$prefix}.";
+//     }
+
+//     -#{$prefix}-#{$property}: $value;
+//   }
+//   #{$property}: $value;
+// }
+
+// .tilt {
+//   // Oops, we typo'd "webkit" as "wekbit"!
+//   @include prefix(transform, rotate(15deg), wekbit ms);
+// }
