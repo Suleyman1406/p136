@@ -90,10 +90,11 @@
 //     b();
 //   }
 // }
+// function test(b){
+//   console.log(b);
+// }
 
-// calculator(5, function(){
-//   console.log('test');
-// })
+// calculator(5, test)
 
 // console.log(Number.isNaN());
 
