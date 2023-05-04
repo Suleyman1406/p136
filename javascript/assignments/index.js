@@ -111,6 +111,13 @@
 // console.log(myArr);
 
 // console.log(myArr.join('-').split(''));
-            //  "1-2-3-4" -> ['1','2','3','4']
+//  "1-2-3-4" -> ['1','2','3','4']
 
 // console.log(Math.random());
+
+function isPalindrome(number) {
+  let stringNumber = String(number); // "112"
+  let arrayNumber = stringNumber.split("").reverse().join(""); // ["1","1","2"] -> ["2","1","1"] -> "211"
+  return stringNumber === arrayNumber;
+}
+console.log(isPalindrome(112));
