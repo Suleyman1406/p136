@@ -115,9 +115,87 @@
 
 // console.log(Math.random());
 
-function isPalindrome(number) {
-  let stringNumber = String(number); // "112"
-  let arrayNumber = stringNumber.split("").reverse().join(""); // ["1","1","2"] -> ["2","1","1"] -> "211"
-  return stringNumber === arrayNumber;
-}
-console.log(isPalindrome(112));
+// function isPalindrome(number) {
+//   let stringNumber = String(number); // "112"
+//   let arrayNumber = stringNumber.split("").reverse().join(""); // ["1","1","2"] -> ["2","1","1"] -> "211"
+//   return stringNumber === arrayNumber;
+// }
+// console.log(isPalindrome(112));
+
+// D.
+//   1. Parametr olaraq array alan bir funksiya yaradın.
+//   2. Funksiyanın içində bir 'result' dəyişkəniniz olacaq ki başlanğıc dəyəri 1 olmalıdır. Gələn arrayin içində boolean və integer dəyərlər olacaq. Hər zaman cüt indexlərdə integer'lər, tək indexlərdə boolean dəyərlər olacaq.
+//   3. Arrayin içində olan dəyərlərə uyğun olaraq integerdan sonra gələn boolean true'dursa result dəyərinə vurulacaq. Və arraydəki bütün elementlərə bu uygulandıqdan sonra result return ediləcək.
+//   ÖNƏMLİ!! true, false burada boolean dəyərdir. String Deyil!!
+// Example:
+//     func([2, true, 3, false, 7, true, 4 false]) => 14  //(2 * 7)
+//     // burada 2 və 7 nin qarşısında true olduğuna görə onlar sadəcə bir birinə vurulur.
+//     func([8, false, 4, false, 11, false, 2 false]) => 1
+//     func([8, false, 3, true, 7, false, 1, true, 8, true] => 24 // (3*1*8)
+//     func([5, false, 2, true, 7, true, 6, true, 9, false] => 84 // (2*7*6)
+
+// function calculateTrues(myArr) {
+//   let result = 1;
+//   for (let i = 0; i < myArr.length; i += 2) {
+//     if (myArr[i + 1]) {
+//       result *= myArr[i];
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(calculateTrues([10, true, 2, false, 3, true, 4, false]));
+
+// E.
+//   1. Parametr olaraq array alan funksiya yaradın.  2. Girilən arrayin içində olan dəyərləri təkrar eləməyəcək şəkildə bir arrayə doldurun və bu arrayi return edin.
+// ÖNƏMLİ!! Set'dən istifadə etmək olmaz.
+//   Example:
+//     func([1, "salam", 1, true, true, false, false, false, 5, "5"] => [1, salam, true, false, 5]
+//     func([2, "class", 1, true, "class", 16, 17, 18,  "17"]) => [2, class, 1, true, 16, 17, 18]
+
+// function clearArr(myArr) {
+//   let myNewArr = [];
+//   myArr.forEach((item) => {
+//     if (typeof item === "string" && !isNaN(Number(item))) item = Number(item);
+//     let itemIdx = myNewArr.findIndex((newItem) => {
+//       return newItem === item;
+//     });
+//     if (itemIdx == -1) {
+//       myNewArr.push(item);
+//     }
+//   });
+//   return myNewArr;
+// }
+
+// console.log(
+//   clearArr([1, "salam", 1, true, true, false, false, false, 5, "5", 0, "0"])
+// );
+
+// F.
+//   1. Bir funksiya yaradın(hec birsey return elemeyecek). Funksiya parametr olaraq array alsın.
+//   2. Funksiya girilən arrayin içindəki elementlərin hər birindən neçə dənə olduğunu ekrana yazdırmalıdır.
+//   Example:
+//     func([5, 2, "salam", "necesen", "salam", 56, 2, 7, 7, 7 ]) =>
+//       print:
+//       5 -> 1 ədəd
+//       2 -> 2 ədəd
+//       salam -> 2 ədəd
+//       necesen -> 1 ədəd
+//       56 -> 1 ədəd
+//       7 -> 3 ədəd
+
+// function countArrayItems(myArr) {
+//   let myCountedArrItems = [];
+
+//   myArr.forEach((item) => {
+//     let resIdx = myCountedArrItems.findIndex((newItem) => item == newItem);
+//     if (resIdx === -1) {
+//       console.log(
+//         `count of ${item} : ${myArr.filter((myItem) => myItem === item).length}`
+//       );
+//     }
+//     myCountedArrItems.push(item);
+//   });
+// }
+
+// countArrayItems([1, 1, 2, 2, 2, 3, 45]);
