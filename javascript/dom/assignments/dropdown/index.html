@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        padding: 40px;
+      }
+      .dropdown {
+        position: relative;
+      }
+      .dropdown .select {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 150px;
+        padding: 4px 6px;
+        cursor: pointer;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+      .dropdown .options {
+        width: 150px;
+        max-height: 100px;
+        overflow-y: auto;
+        position: absolute;
+        top: 32px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        z-index: 10;
+        background-color: white;
+      }
+      .dropdown .options p {
+        padding: 3px 5px;
+        border-bottom: 1px solid rgb(226, 226, 226);
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      .dropdown .options p:hover {
+        background-color: rgb(122, 182, 235);
+        color: white;
+      }
+      .hide {
+        display: none;
+      }
+      .rotate180 {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="dropdown">
+        <div class="select">
+          <p>Select on</p>
+          <span style="transition: 0.3s; width: 15px; display: inline-block">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="options hide">
+          <p>HTML</p>
+          <p>HTML</p>
+          <p>HTML</p>
+          <p>HTML</p>
+          <p>HTML</p>
+          <p>HTML</p>
+          <p>HTML</p>
+          <p>CSS</p>
+          <p>JS</p>
+        </div>
+      </div>
+      <input type="text" style="margin-top: 10px" />
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
