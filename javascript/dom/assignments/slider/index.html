@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .window {
+        margin: 100px;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      button {
+        position: absolute;
+        top: 42px;
+        z-index: 10;
+      }
+      button:first-child {
+        left: 0;
+      }
+      button:last-child {
+        right: 0;
+      }
+
+      .slides {
+        position: absolute;
+        left: 0;
+        display: flex;
+        width: fit-content;
+        transition: 0.3s;
+      }
+      .slide {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .slide:nth-child(1) {
+        background-color: red;
+      }
+      .slide:nth-child(2) {
+        background-color: blue;
+      }
+      .slide:nth-child(3) {
+        background-color: pink;
+      }
+      .slide:nth-child(4) {
+        background-color: aqua;
+      }
+      .slide:nth-child(5) {
+        background-color: chartreuse;
+      }
+      .slide:nth-child(6) {
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="window">
+      <button><</button>
+      <div class="slides">
+        <div class="slide">1</div>
+        <div class="slide">2</div>
+        <div class="slide">3</div>
+        <div class="slide">4</div>
+        <div class="slide">5</div>
+        <div class="slide">6</div>
+      </div>
+      <button>></button>
+    </div>
+    <script>
+      const btn1 = document.querySelector("button:first-child");
+      const btn2 = document.querySelector("button:last-child");
+      const slides = document.querySelector(".slides");
+      const slidesLength = slides.children.length;
+      let leftValue = 0;
+      btn1.addEventListener("click", () => {
+        if (leftValue === 0) {
+          leftValue = -(slidesLength - 1) * 100;
+        } else {
+          leftValue += 100;
+        }
+        // leftValue =
+        //   leftValue === 0 ? -(slidesLength - 1) * 100 : leftValue + 100;
+        slides.style.left = leftValue + "px";
+      });
+      btn2.addEventListener("click", () => {
+        if (leftValue === -(slidesLength - 1) * 100) {
+          leftValue = 0;
+        } else {
+          leftValue -= 100;
+        }
+        slides.style.left = leftValue + "px";
+      });
+      setTimeout;
+    </script>
+  </body>
+</html>
