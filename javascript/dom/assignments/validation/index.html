@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .input_container {
+        width: 200px;
+        margin: 40px;
+        display: inline-block;
+        position: relative;
+      }
+      input {
+        width: 100%;
+        padding: 3px;
+      }
+      .validation_popup {
+        display: none;
+        position: absolute;
+        width: 200px;
+        background-color: bisque;
+        left: 240px;
+        top: -30px;
+      }
+      p {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input_container">
+      <input type="text" placeholder="password" />
+      <div class="validation_popup">
+        <p>At Least one letter</p>
+        <p>At Least one big letter</p>
+        <p>At Least one number</p>
+        <p>eight</p>
+        <p>special (*,@,#,$)</p>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
