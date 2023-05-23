@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // let myMoney = 81;
+      // let productPrice = 4;
+      // let myBasket = [
+      //   {
+      //     id: 1,
+      //     count: 3,
+      //   },
+      // ];
+      // let input = document.querySelector("input");
+      // input.addEventListener("keyup", (e) => {
+      //   let count = e.target.value;
+      //   if (count === "" || isNaN(+count)) return;
+      //   if (myMoney < count * productPrice) {
+      //     e.target.value = Math.trunc(myMoney / productPrice);
+      //   }
+      // });
+
+      let cards = [
+        {
+          id: 1,
+          name: "BigMac",
+          price: 2,
+        },
+        {
+          id: 2,
+          name: "Flip FLop",
+          price: 4,
+        },
+        {
+          id: 3,
+          name: "Colgate",
+          price: 8,
+        },
+      ];
+
+      cards.forEach((card) => {
+        let cardDiv = document.createElement("div");
+        let cardNameP = document.createElement("p");
+        let cardCountInput = document.createElement("input");
+        cardCountInput.setAttribute("type", "number");
+        cardCountInput.value = 0;
+        cardNameP.textContent = card.name;
+        let cardPriceP = document.createElement("p");
+        cardPriceP.textContent = card.price;
+        let cardBuyBtn = document.createElement("button");
+        cardBuyBtn.textContent = "Buy";
+        cardDiv.append(cardNameP, cardPriceP, cardCountInput, cardBuyBtn);
+        document.body.append(cardDiv);
+        cardBuyBtn.addEventListener("click", () => {
+          cardCountInput.value++;
+        });
+        cardCountInput.addEventListener("keyup", () => {
+          cardBuyBtn.click();
+        });
+      });
+    </script>
+  </body>
+</html>
