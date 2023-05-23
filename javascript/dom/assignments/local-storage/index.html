@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Iphone</td>
+          <td>2000</td>
+          <td><button>Add to basket</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Iphone 15</td>
+          <td>5000</td>
+          <td><button>Add to basket</button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Iphone 16</td>
+          <td>5900</td>
+          <td><button>Add to basket</button></td>
+        </tr>
+      </tbody>
+      <!-- <button id="themeBtn">Dark</button> -->
+    </table>
+    <script>
+      const buttons = document.querySelectorAll("button");
+
+      buttons.forEach((button) =>
+        button.addEventListener("click", (e) => {
+          const tr = e.target.parentElement.parentElement;
+          let product = {
+            id: tr.children[0].textContent,
+            name: tr.children[1].textContent,
+            price: tr.children[2].textContent,
+          };
+          let basket = JSON.parse(localStorage.getItem("basket")) || [];
+          localStorage.setItem("basket", JSON.stringify([...basket, product]));
+        })
+      );
+      // const btn = document.getElementById("themeBtn");
+      // let isDarkMode = localStorage.getItem("theme") === "dark";
+      // if (isDarkMode) {
+      //   document.body.style.backgroundColor = "black";
+      //   document.body.style.color = "white";
+      // }
+
+      // btn.addEventListener("click", () => {
+      //   isDarkMode = !isDarkMode;
+      //   localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+      //   document.body.style.backgroundColor = isDarkMode ? "black" : "white";
+      //   document.body.style.color = isDarkMode ? "white" : "black";
+      // });
+    </script>
+  </body>
+</html>
