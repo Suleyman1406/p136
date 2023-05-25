@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <table>
+    <!-- <table>
       <thead>
         <tr>
           <th>Id</th>
@@ -36,23 +36,23 @@
           <td><button>Add to basket</button></td>
         </tr>
       </tbody>
-      <!-- <button id="themeBtn">Dark</button> -->
-    </table>
+      <button id="themeBtn">Dark</button>
+    </table> -->
     <script>
-      const buttons = document.querySelectorAll("button");
+      // const buttons = document.querySelectorAll("button");
 
-      buttons.forEach((button) =>
-        button.addEventListener("click", (e) => {
-          const tr = e.target.parentElement.parentElement;
-          let product = {
-            id: tr.children[0].textContent,
-            name: tr.children[1].textContent,
-            price: tr.children[2].textContent,
-          };
-          let basket = JSON.parse(localStorage.getItem("basket")) || [];
-          localStorage.setItem("basket", JSON.stringify([...basket, product]));
-        })
-      );
+      // buttons.forEach((button) =>
+      //   button.addEventListener("click", (e) => {
+      //     const tr = e.target.parentElement.parentElement;
+      //     let product = {
+      //       id: tr.children[0].textContent,
+      //       name: tr.children[1].textContent,
+      //       price: tr.children[2].textContent,
+      //     };
+      //     let basket = JSON.parse(localStorage.getItem("basket")) || [];
+      //     localStorage.setItem("basket", JSON.stringify([...basket, product]));
+      //   })
+      // );
       // const btn = document.getElementById("themeBtn");
       // let isDarkMode = localStorage.getItem("theme") === "dark";
       // if (isDarkMode) {
@@ -66,6 +66,15 @@
       //   document.body.style.backgroundColor = isDarkMode ? "black" : "white";
       //   document.body.style.color = isDarkMode ? "white" : "black";
       // });
+
+      // localStorage.setItem("name", "asdasd");
+      // localStorage.setItem("name2", "asdasd");
+      // console.log(localStorage.getItem("name"));
+      // localStorage.removeItem("name");
+
+      // localStorage.clear();
+      // localStorage.setItem("car", JSON.stringify({ name: "203", age: "22" }));
+      // console.log(JSON.parse(localStorage.getItem("car")));
     </script>
   </body>
 </html>

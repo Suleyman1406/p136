@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="products"></div>
+    <h1>Basket</h1>
+    <div id="basket"></div>
+    <script>
+      const procuctsContainer = document.getElementById("products");
+      const productsBasket = document.getElementById("basket");
+      const PRODUCTS = [
+        {
+          id: 1,
+          name: "Cola",
+          price: 2,
+        },
+        {
+          id: 2,
+          name: "Marker",
+          price: 3,
+        },
+        {
+          id: 3,
+          name: "Apple",
+          price: 1,
+        },
+      ];
+
+      PRODUCTS.forEach((product) => {
+        const div = document.createElement("div");
+        const span = document.createElement("span");
+        const button = document.createElement("button");
+        span.textContent = product.name + " $ " + product.price;
+        button.innerText = "Add to Heci";
+        div.append(span, button);
+        procuctsContainer.append(div);
+
+        button.addEventListener("click", () => {
+          // console.log(product);
+          let basket = JSON.parse(localStorage.getItem("basket")) || [];
+          localStorage.setItem("basket", JSON.stringify([...basket, product]));
+          getProductsFromLocalStorage();
+        });
+      });
+
+      function getProductsFromLocalStorage() {
+        productsBasket.innerHTML = "";
+        const basketItems = JSON.parse(localStorage.getItem("basket")) || [];
+        basketItems.forEach((item) => {
+          const div = document.createElement("div");
+          const span = document.createElement("span");
+          span.textContent = item.name + " $ " + item.price;
+          div.append(span);
+          productsBasket.append(div);
+        });
+      }
+      getProductsFromLocalStorage();
+      // localStorage.setItem("name", [1, 2, 3, 4, 5, 6]);
+      // localStorage.setItem("name", 4);
+      // localStorage.setItem("car", JSON.stringify({ name: "BMW" }));
+      // localStorage.setItem("cars", JSON.stringify([{ name: "BMW" }]));
+
+      // const carsArr = JSON.parse(localStorage.getItem("cars"));
+      // carsArr.push({ name: "MERCEDES" });
+      // localStorage.setItem("cars", JSON.stringify(carsArr));
+    </script>
+  </body>
+</html>
